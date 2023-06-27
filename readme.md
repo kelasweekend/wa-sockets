@@ -2,11 +2,15 @@
 
 ## Whatsapp Sockets - Connecting Whatsapp
 
-Connecting Your app with Whatsapp Messaging
+Connecting Your app with Whatsapp Messaging this Unofficial Repositories
 
 Lightweight library for whatsapp. Not require Selenium or any other browser.
 
-Stand above [Baileys](https://github.com/WhiskeySockets/Baileys) Library.
+## For Informations
+
+that we no longer provide sending type button and list messages because they are no longer available,
+
+please if you want to use these type messages use the Whatsapp Meta API on the business meta page.
 
 ## Installation
 
@@ -95,6 +99,18 @@ const send = await whatsapp.sendImage({
   to: "62813xxx",
   text: "My Video Caption",
   media: video, // can from URL too
+});
+```
+
+Send Location
+
+```ts
+const video = fs.readFileSync("./myvideo.mp4");
+const send = await whatsapp.sendImage({
+  sessionId: "session1",
+  to: "62813xxx",
+  longitude: 51.223121,
+  latitude: 13.131412,
 });
 ```
 
@@ -192,14 +208,10 @@ wa.onMessageReceived(async (msg) => {
 Set custom credentials directory
 
 ```ts
-// default dir is "wa_credentials"
+// default dir is "wa_sessions"
 whatsapp.setCredentialsDir("my_custom_dir");
 // or : credentials/mycreds
 ```
-
-## Change Log v1.1.0 June 2023
-
-- Added Send Message Location
 
 ## Authors
 
@@ -207,4 +219,5 @@ whatsapp.setCredentialsDir("my_custom_dir");
 
 ## Feedback or Support
 
-If you have any feedback or support, please reach out to me at kelasweekend.id@gmail.com
+If you have any feedback or support, please contact me at kelasweekend.id@gmail.com
+If there is a code problem please do open issue page of my repository, I will immediately make repairs as soon as possible
