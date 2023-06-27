@@ -197,10 +197,9 @@ whatsapp.setCredentialsDir("my_custom_dir");
 // or : credentials/mycreds
 ```
 
-## Change Log v3.0.0 June 2023
+## Change Log v1.1.0 June 2023
 
-- Fix Logout Issue
-- Switching into [@whiskeysockets/baileys](https://github.com/WhiskeySockets/Baileys)
+- Added Send Message Location
 
 ## Authors
 
