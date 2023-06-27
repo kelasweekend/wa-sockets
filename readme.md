@@ -221,3 +221,5 @@ whatsapp.setCredentialsDir("my_custom_dir");
 
 If you have any feedback or support, please contact me at kelasweekend.id@gmail.com
 If there is a code problem please do open issue page of my repository, I will immediately make repairs as soon as possible
+
+copyright 2023
