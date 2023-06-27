@@ -1,4 +1,6 @@
-# Whatsapp Multi Session - Connecting More Whatsapp Session in 1 App
+![Banner](https://raw.githubusercontent.com/kelasweekend/nodejs-Api-Whatsapp/main/20230627_232616_0000.png)
+
+## Whatsapp Sockets - Connecting Whatsapp
 
 Connecting Your app with Whatsapp Messaging
 
@@ -11,7 +13,7 @@ Stand above [Baileys](https://github.com/WhiskeySockets/Baileys) Library.
 Install package using npm
 
 ```
-npm install wa-socket
+npm install wa-sockets
 ```
 
 Then import your code
@@ -19,13 +21,13 @@ Then import your code
 Using JS Module
 
 ```ts
-import * as whatsapp from "wa-socket";
+import * as whatsapp from "wa-sockets";
 ```
 
 or using CommonJS
 
 ```ts
-const whatsapp = require("wa-socket");
+const whatsapp = require("wa-sockets");
 ```
 
 ## Session Usage/Examples
@@ -33,9 +35,9 @@ const whatsapp = require("wa-socket");
 Start New Session
 
 ```ts
-// create session with ID : mysessionid
+// create session with ID : wa-sessions
 
-const session = await whatsapp.startSession("mysessionid");
+const session = await whatsapp.startSession("wa-sessions");
 // Then, scan QR on terminal
 ```
 
@@ -49,7 +51,7 @@ const sessions = whatsapp.getAllSession();
 Get Session Data By ID
 
 ```ts
-const session = whatsapp.getSession("mysessionid");
+const session = whatsapp.getSession("wa-sessions");
 // returning session data
 ```
 
@@ -67,7 +69,7 @@ Send Text Message
 ```ts
 await whatsapp.sendTextMessage({
   sessionId: "mysessionid", // session ID
-  to: "6281234567890", // always add country code (ex: 62)
+  to: "62813xxx", // always add country code (ex: 62)
   text: "Hi There, This is Message from Server!", // message you want to send
 });
 ```
@@ -78,7 +80,7 @@ Send Image
 const image = fs.readFileSync("./myimage.png");
 const send = await whatsapp.sendImage({
   sessionId: "session1",
-  to: "6281234567890",
+  to: "62813xxx",
   text: "My Image Caption",
   media: image, // can from URL too
 });
@@ -90,7 +92,7 @@ Send Video
 const video = fs.readFileSync("./myvideo.mp4");
 const send = await whatsapp.sendImage({
   sessionId: "session1",
-  to: "6281234567890",
+  to: "62813xxx",
   text: "My Video Caption",
   media: video, // can from URL too
 });
@@ -110,7 +112,7 @@ Send Typing Effect
 ```ts
 await whatsapp.sendTyping({
   sessionId: "session1",
-  to: "6281234567890",
+  to: "62813xxx",
   duration: 3000,
 });
 ```
