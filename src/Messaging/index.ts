@@ -69,8 +69,8 @@ export const sendImage = async ({
       image:
         typeof media == "string"
           ? {
-              url: media,
-            }
+            url: media,
+          }
           : media,
       caption: text,
     },
@@ -83,8 +83,8 @@ export const sendImage = async ({
 export const sendLocation = async ({
   sessionId,
   to,
-  longitude = "",
-  latitude = "",
+  longitude,
+  latitude,
   isGroup = false,
   ...props
 }: SendMessageLocation): Promise<proto.WebMessageInfo | undefined> => {
@@ -103,12 +103,12 @@ export const sendLocation = async ({
 
   return await session.sendMessage(
     to,
-    { 
-      location: 
-      { 
-        degreesLatitude: latitude, 
-        degreesLongitude: longitude 
-      } 
+    {
+      location:
+      {
+        degreesLatitude: latitude,
+        degreesLongitude: longitude
+      }
     }
   );
 };
@@ -140,8 +140,8 @@ export const sendVideo = async ({
       video:
         typeof media == "string"
           ? {
-              url: media,
-            }
+            url: media,
+          }
           : media,
       caption: text,
     },

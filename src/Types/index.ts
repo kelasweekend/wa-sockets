@@ -12,8 +12,8 @@ export interface SendMessageLocation {
   to: string | number;
   sessionId: string;
   isGroup?: boolean;
-  longitude?: string;
-  latitude?: string;
+  longitude?: number;
+  latitude?: number;
 }
 
 export interface SendMediaTypes extends SendMessageTypes {
